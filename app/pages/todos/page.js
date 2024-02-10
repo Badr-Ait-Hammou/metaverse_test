@@ -1,15 +1,19 @@
 "use client";
 import {useEffect, useState} from "react";
 import {todoService} from "@/app/service/todoService";
-import {Button} from "primereact/button";
 import {AddModal} from "@/app/components/AddModal";
 import {UpdateModal} from "@/app/components/UpdateModal";
+import ConfirmationModal from "@/app/components/ConfirmationDialog";
 
 export default function Todos() {
     const [todos, setTodos] = useState([]);
     const [selectedTodo, setSelectedTodo] = useState(null);
     const [isUpdateModalOpen, setIsUpdateModalOpen] = useState(false);
     const [isAddModalOpen, setIsAddModalOpen] = useState(false);
+    const [isDeleteConfirmationOpen, setIsDeleteConfirmationOpen] = useState(false);
+    const [deleteTodoId, setDeleteTodoId] = useState(null);
+
+
 
     const loadData = async () => {
         try {
@@ -21,8 +25,8 @@ export default function Todos() {
         }
     };
 
-    useEffect(() => {
 
+    useEffect(() => {
         loadData();
     }, []);
 
@@ -36,19 +40,23 @@ export default function Todos() {
             hour: 'numeric',
             minute: 'numeric'
         };
-        const formattedDate = new Date(createdAt).toLocaleDateString('en-US', options);
-        return formattedDate;
+        return  new Date(createdAt).toLocaleDateString('en-US', options);
     };
 
 
+    const handleDeleteClick = (id) => {
+        setDeleteTodoId(id);
+        setIsDeleteConfirmationOpen(true);
+    };
 
-
-    const handleDeleteClick = async (id) => {
+    const confirmDelete = () => {
         try {
-            await todoService.deleteTodo(id);
+            todoService.deleteTodo(deleteTodoId).then(r => loadData());
             loadData();
         } catch (error) {
             console.log(error);
+        } finally {
+            setIsDeleteConfirmationOpen(false);
         }
     };
 
@@ -71,21 +79,13 @@ export default function Todos() {
         setSelectedTodo(null);
     };
 
-
-
-
-    const updateTodo = async (updatedTodoData) => {
-        try {
-            await todoService.updateTodo(selectedTodo._id, updatedTodoData);
-            loadData();
-            handleUpdateModalClose();
-        } catch (error) {
-            console.log(error);
-        }
-    };
-
     const addTodo = async (newTodoData) => {
         try {
+            if (!newTodoData.title || !newTodoData.description) {
+                window.alert("Title and description are required for adding a new todo.");
+                return;
+            }
+
             const addedTodo = await todoService.saveTodo(newTodoData);
             loadData();
             console.log('Todo added:', addedTodo);
@@ -95,6 +95,44 @@ export default function Todos() {
         }
     };
 
+    const updateTodo = async (updatedTodoData) => {
+        try {
+            if (!updatedTodoData.title || !updatedTodoData.description) {
+                window.alert("Title and description are required for updating the todo.");
+                return;
+            }
+            await todoService.updateTodo(selectedTodo._id, updatedTodoData);
+            loadData();
+            handleUpdateModalClose();
+        } catch (error) {
+            console.log(error);
+        }
+    };
+
+
+
+
+    // const updateTodo = async (updatedTodoData) => {
+    //     try {
+    //         await todoService.updateTodo(selectedTodo._id, updatedTodoData);
+    //         loadData();
+    //         handleUpdateModalClose();
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
+
+    // const addTodo = async (newTodoData) => {
+    //     try {
+    //         const addedTodo = await todoService.saveTodo(newTodoData);
+    //         loadData();
+    //         console.log('Todo added:', addedTodo);
+    //         handleAddClickClose();
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
+
     const renderTodoItem = (todo) => (
         <div key={todo._id} className="w-full">
             <div className="w-full  p-3  rounded-lg ">
@@ -102,13 +140,12 @@ export default function Todos() {
 
                     <h1 className="text-3xl font-bold text-black capitalize ">{todo.title}</h1>
                     <h1 className="text-xl font-bold text-black capitalize ">{todo.description}</h1>
-
                     <p className="text-gray-500 dark:text-gray-300">{formatCreatedAt(todo.createdAt)}</p>
 
                     <div >
                     <button
                         onClick={() => handleDeleteClick(todo._id)}
-                        className="inline-flex p-2 mt-5 text-red-500 capitalize transition-colors duration-200 transform bg-red-100 rounded-full dark:bg-red-500 dark:text-white  hover:text-white dark:hover:text-white">
+                        className="mx-2  inline-flex p-2 text-white capitalize   bg-orange-400 rounded-full ">
                        delete
                     </button>
 
@@ -125,7 +162,10 @@ export default function Todos() {
     );
 
     return (
+        <>
+
         <section className="bg-white">
+
             <div className="bg-gray-200 p-4 m-4 text-white  rounded-2xl  flex justify-between items-center">
                 <h1 className="text-2xl text-black font-bold">TODO_LIST</h1>
                 <button className="px-4 py-2 bg-teal-500 rounded-md text-white"  onClick={() => handleAddClick()}>Add</button>
@@ -161,6 +201,13 @@ export default function Todos() {
                     addTodo(newTodoData);
                 }}
             />
+            <ConfirmationModal
+                isOpen={isDeleteConfirmationOpen}
+                onClose={() => setIsDeleteConfirmationOpen(false)}
+                onConfirm={confirmDelete}
+            />
         </section>
+        </>
+
     );
 }

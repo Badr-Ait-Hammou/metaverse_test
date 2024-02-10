@@ -35,12 +35,12 @@ export const AddModal = ({ isOpen, onClose, onAdd }) => {
 
                     <button
                         onClick={handleAdd}
-                        className="  inline-flex p-1 text-blue-500 capitalize transition-colors duration-200 transform bg-blue-100 rounded-full dark:bg-blue-500 dark:text-white  hover:text-white dark:hover:text-white">
+                        className="  inline-flex p-2 text-white capitalize   bg-teal-400 rounded-full ">
                         Add
                     </button>
                     <button
                         onClick={onClose}
-                        className="mx-2 inline-flex p-1 mt-5 text-red-500 capitalize transition-colors duration-200 transform bg-red-100 rounded-full dark:bg-red-500 dark:text-white  hover:text-white dark:hover:text-white">
+                        className="mx-2  inline-flex p-2 text-white capitalize   bg-orange-400 rounded-full ">
                         close
                     </button>
                 </div>
