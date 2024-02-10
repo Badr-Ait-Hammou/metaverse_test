@@ -33,7 +33,7 @@ export default function Navbar(){
                         {/*</div>*/}
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="flex space-x-4">
-                                <Link href="/pages/home">
+                                <Link href="/pages/todos">
                                     <p  className="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Metaverse</p>
                                 </Link>
                                 <Link href="/pages/home">

@@ -15,9 +15,9 @@ export async function GET() {
     return NextResponse.json({ todos });
 }
 
-export async function DELETE(request) {
-    const id = request.nextUrl.searchParams.get("id");
-    await connectMongoDB();
-    await Todo.findByIdAndDelete(id);
-    return NextResponse.json({ message: "todos deleted" }, { status: 200 });
-}
+// export async function DELETE(request) {
+//     const id = request.nextUrl.searchParams.get("id");
+//     await connectMongoDB();
+//     await Todo.findByIdAndDelete(id);
+//     return NextResponse.json({ message: "todos deleted" }, { status: 200 });
+// }
