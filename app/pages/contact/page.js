@@ -3,8 +3,7 @@ import "/style/home.css"
 export default function Contact(){
     return(
         <div >
-
-        <div className="flex flex-col min-h-screen mx-40 ">
+        <div className="flex flex-col min-h-screen mx-5 md:mx-40 ">
             <div className="flex flex-wrap mt-10">
                 <div className="w-full md:w-7/12 p-2">
                     <label htmlFor="full name" className="block mb-2 text-xl font-bold text-white ">Full name</label>

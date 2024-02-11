@@ -13,12 +13,12 @@ export default function About() {
                           d="M0,64L48,58.7C96,53,192,43,288,58.7C384,75,480,117,576,138.7C672,160,768,160,864,138.7C960,117,1056,75,1152,64C1248,53,1344,75,1392,85.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
                 </svg>
                 <div className="p-2 mx-5">
-                    <div className="flex items-center">
-                        <div className="w-3/12 p-5 text-white">
+                    <div className="flex flex-col md:flex-row items-center">
+                        <div className="w-full md:w-3/12 p-5 text-white mb-5 md:mb-0">
                             <h1 className="text-8xl font-sans text-gray-50 mb-5 gap-5">Who are we?</h1>
                         </div>
 
-                        <div className="w-7/12 ">
+                        <div className="w-full md:w-7/12">
                             <h2 className="text-3xl text-justify font-sans text-gray-50 mb-5 gap-5">At Test, we are a
                                 mental health services provider dedicated to supporting individuals during challenging
                                 times. Founded in 2021, in the wake of the post-COVID-19 pandemic, we recognized the
@@ -26,11 +26,9 @@ export default function About() {
                                 We are committed to offering convenient and personalized services in the comfort of your
                                 home.</h2>
                         </div>
-
-                        <div className="w-2/12">
-                        </div>
                     </div>
                 </div>
+
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 180">
                     <path fill="#1e2e5c"
                           d="M0,64L48,58.7C96,53,192,43,288,58.7C384,75,480,117,576,138.7C672,160,768,160,864,138.7C960,117,1056,75,1152,64C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
@@ -39,7 +37,7 @@ export default function About() {
 
 
             <div className="  -mt-5">
-                <div className="p-2 mx-5">
+                <div className="  mx-5">
                     <div className="flex items-center">
                         <div className="w-10/12 p-5 text-white -mt-5">
                             <h2 className="text-3xl text-justify font-sans text-gray-50  ">Our mission is to empower
@@ -51,7 +49,7 @@ export default function About() {
                             <Image
                                 src={character}
                                 alt="Example Image"
-                                className="w-full h-auto  ml-5 -mt-96"
+                                className="w-full h-auto  ml-5 md:-mt-96"
                             />
                         </div>
                     </div>
@@ -128,7 +126,7 @@ export default function About() {
                             </h2>
                         </div>
 
-                        <div className="w-2/12">
+                        <div className="w-12/12 md:w-2/12">
                         </div>
                     </div>
                 </div>
@@ -140,17 +138,18 @@ export default function About() {
 
             <div className="  xl:-mt-40  sm:-mt-10 lg:-mt-40">
                 <div>
-                    <div className="flex items-center">
-                        <div className="w-10/12  text-white ">
+                    <div className="flex flex-col md:flex-row p-5">
+                        <div className="w-full md:w-10/12 mb-5 md:mb-0">
                         </div>
-                        <div className="w-2/12 justify-end">
+                        <div className="w-4/12 md:w-2/12">
                             <Image
                                 src={character4}
                                 alt="Example Image"
-                                className="w-full h-auto  mr-5 -mt-96 "
+                                className="w-full h-auto  mr-5 md:-mt-96 "
                             />
                         </div>
                     </div>
+
                 </div>
             </div>
 
