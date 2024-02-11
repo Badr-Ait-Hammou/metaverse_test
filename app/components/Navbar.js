@@ -77,7 +77,7 @@ export default function Navbar(){
                     </Link>
 
                     <Link href="/pages/contact">
-                        <p  className="px-3 py-2  bg-green-700 border-2 border-green-700  text-white font-semibold rounded-3xl text-sm">Contact</p>
+                        <p  className="px-3 py-2  bg-green-700 border-2 border-green-700  text-white font-semibold rounded-3xl text-sm">Contact Us</p>
                     </Link>
                 </div>
             </div>

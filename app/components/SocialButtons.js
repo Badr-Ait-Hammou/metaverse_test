@@ -1,6 +1,6 @@
 export default function SocialButtons() {
     return (
-        <div>
+        <div className="mt-2">
             <button
                 type="button"
                 data-te-ripple-color="light"
