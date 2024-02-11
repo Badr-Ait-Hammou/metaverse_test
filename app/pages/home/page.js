@@ -15,7 +15,7 @@ export default function HomePage() {
                     <div className="w-1/2 mx-1">
                         <h5 className="text-7xl font-bold text-white ">What is Mental Health?</h5>
                         <h3 className="text-2xl font-sans text-gray-50 mt-5 text-justify">Mental health encompasses the overall
-                            well-being of an individual's emotional and psychological state. In South Africa, mental
+                            well-being of an individual&apos;s emotional and psychological state. In South Africa, mental
                             health disorders are prevalent, with the South African Stress and Health (SASH) study
                             reporting that around 30% of the population will experience a mental disorder in their
                             lifetime.</h3>

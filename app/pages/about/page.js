@@ -123,7 +123,7 @@ export default function About() {
                                 At Bimo Health, our purpose is deeply rooted in our belief that solutions created to
                                 serve others, especially those who are underserved,
                                 are always the best solutions. We are driven by the commitment to make a positive impact
-                                on individuals' lives,
+                                on individuals lives,
                                 ensuring that everyone has access to the mental health care they deserve.
                             </h2>
                         </div>
@@ -161,8 +161,8 @@ export default function About() {
                             <h2 className="text-3xl text-justify font-sans text-gray-50  ">
                                 We understand that seeking care for mental health concerns can be challenging, with
                                 various barriers that can prevent individuals from receiving the support they need.
-                                That's why we are dedicated to removing those barriers and making mental health care
-                                more accessible to all. Whether it's geographical limitations, financial constraints, or
+                                That&apos;s why we are dedicated to removing those barriers and making mental health care
+                                more accessible to all. Whether it&apos;s geographical limitations, financial constraints, or
                                 stigmas surrounding mental health,
                                 we strive to bridge the gaps and create a safe and inclusive space where individuals can
                                 seek help without hesitation or obstacles.
