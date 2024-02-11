@@ -14,23 +14,18 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## HOME PAGE:
+![homep](https://github.com/Badr-Ait-Hammou/metaverse_test/assets/121731124/15974f1d-2720-411f-8e35-b41fa88ad727)
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## ABOUT US:
+![about](https://github.com/Badr-Ait-Hammou/metaverse_test/assets/121731124/8d73e803-5c1a-47fc-949b-7f82691c26d8)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## CONTACT:
+![contact](https://github.com/Badr-Ait-Hammou/metaverse_test/assets/121731124/b8cf2a56-c7a2-4925-8665-23ff4660b08c)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+## TODO LIST "CRUD":
+![todos](https://github.com/Badr-Ait-Hammou/metaverse_test/assets/121731124/6e8d37de-2272-49d5-9712-3d51986321e2)
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
