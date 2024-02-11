@@ -1,21 +1,20 @@
 import Image from 'next/image';
 
-import img1 from "/public/firstimg.svg";
+import img1 from "/assets/firstimg.svg";
 import "/style/home.css"
-import seconImage from "/public/secondimg.svg"
-import thirdImage from "/public/thirdimg.svg"
-import SocialButtons from "@/app/components/SocialButtons";
+import seconImage from "@/assets/secondimg.svg"
+import thirdImage from "@/assets/thirdimg.svg"
 
-export default function Home() {
+export default function HomePage() {
     return (
 
 
         <div style={{backgroundColor: "#1E2E5C"}}>
             <div>
                 <div className="flex justify-between items-center py-3 px-5">
-                    <div className="w-1/2">
+                    <div className="w-1/2 mx-1">
                         <h5 className="text-7xl font-bold text-white ">What is Mental Health?</h5>
-                        <h3 className="text-2xl font-sans text-gray-50 mt-5">Mental health encompasses the overall
+                        <h3 className="text-2xl font-sans text-gray-50 mt-5 text-justify">Mental health encompasses the overall
                             well-being of an individual's emotional and psychological state. In South Africa, mental
                             health disorders are prevalent, with the South African Stress and Health (SASH) study
                             reporting that around 30% of the population will experience a mental disorder in their
@@ -31,7 +30,7 @@ export default function Home() {
 
                 </div>
                 <div className="items-center px-5">
-                    <h3 className="text-2xl font-sans text-gray-50 ">Additionally, the South African Depression and
+                    <h3 className="text-2xl font-sans text-gray-50 text-justify">Additionally, the South African Depression and
                         Anxiety Group (SADAG) estimates that approximately 1 in 6 South Africans suffer from anxiety,
                         depression, or substance abuse disorders. The suicide rate in South Africa, according to the
                         World Health Organization (WHO) data for 2016, was approximately 13.8 per 100,000 population.
@@ -45,17 +44,10 @@ export default function Home() {
                 </div>
             </div>
 
-            {/*<div className="w-full">*/}
-            {/*    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">*/}
-            {/*        <path fill="#2E8544" fill-opacity="1" d="M0,64L48,90.7C96,117,192,171,288,176C384,181,480,139,576,117.3C672,96,768,96,864,117.3C960,139,1056,181,1152,176C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>*/}
-            {/*        /!*<path fill="#00cba9" fill-opacity="1" d="M0,64L48,90.7C96,117,192,171,288,176C384,181,480,139,576,117.3C672,96,768,96,864,117.3C960,139,1056,181,1152,176C1248,171,1344,117,1392,90.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>*!/*/}
 
-            {/*    </svg>*/}
-
-            {/*</div>*/}
             <div className="curved-div">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 180">
-                    <path fill="#1e2e5c" fill-opacity="1"
+                    <path fill="#1e2e5c" 
                           d="M0,64L48,58.7C96,53,192,43,288,58.7C384,75,480,117,576,138.7C672,160,768,160,864,138.7C960,117,1056,75,1152,64C1248,53,1344,75,1392,85.3L1440,96L1440,0L1392,0C1344,0,1248,0,1152,0C1056,0,960,0,864,0C768,0,672,0,576,0C480,0,384,0,288,0C192,0,96,0,48,0L0,0Z"></path>
                 </svg>
                 <div className="flex justify-between items-center  ">
@@ -79,7 +71,7 @@ export default function Home() {
 
                 </div>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 180">
-                    <path fill="#1e2e5c" fill-opacity="1"
+                    <path fill="#1e2e5c"
                           d="M0,64L48,58.7C96,53,192,43,288,58.7C384,75,480,117,576,138.7C672,160,768,160,864,138.7C960,117,1056,75,1152,64C1248,53,1344,75,1392,85.3L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                 </svg>
             </div>

@@ -1,4 +1,3 @@
-// UpdateModal.js
 import { useState } from 'react';
 
 export const UpdateModal = ({ isOpen, onClose, onUpdate }) => {

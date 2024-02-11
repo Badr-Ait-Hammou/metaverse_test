@@ -142,7 +142,7 @@ export default function Todos() {
     return (
         <>
 
-        <section className="bg-white">
+        <section className="bg-transparent">
 
             <div className="bg-gray-200 p-4 m-4 text-white  rounded-2xl  flex justify-between items-center">
                 <h1 className="text-2xl text-black font-bold">TODO_LIST</h1>
@@ -175,7 +175,6 @@ export default function Todos() {
                 isOpen={isAddModalOpen}
                 onClose={() => setIsAddModalOpen(false)}
                 onAdd={(newTodoData) => {
-                    // Handle add logic
                     addTodo(newTodoData);
                 }}
             />
