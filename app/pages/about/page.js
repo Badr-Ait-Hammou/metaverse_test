@@ -138,7 +138,7 @@ export default function About() {
                 </svg>
             </div>
 
-            <div className=" p-5 xl:-mt-40  sm:-mt-10 lg:-mt-40">
+            <div className="  xl:-mt-40  sm:-mt-10 lg:-mt-40">
                 <div>
                     <div className="flex items-center">
                         <div className="w-10/12  text-white ">
@@ -154,10 +154,10 @@ export default function About() {
                 </div>
             </div>
 
-            <div className=" p-5 -mt-5 mx-5">
+            <div className=" mt-3 md:mt-20 mx-5">
                 <div className="p-2">
                     <div className="flex items-center">
-                        <div className="w-full p-5 text-white -mt-5">
+                        <div className="w-full  text-white ">
                             <h2 className="text-3xl text-justify font-sans text-gray-50  ">
                                 We understand that seeking care for mental health concerns can be challenging, with
                                 various barriers that can prevent individuals from receiving the support they need.
