@@ -111,28 +111,6 @@ export default function Todos() {
 
 
 
-
-    // const updateTodo = async (updatedTodoData) => {
-    //     try {
-    //         await todoService.updateTodo(selectedTodo._id, updatedTodoData);
-    //         loadData();
-    //         handleUpdateModalClose();
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
-
-    // const addTodo = async (newTodoData) => {
-    //     try {
-    //         const addedTodo = await todoService.saveTodo(newTodoData);
-    //         loadData();
-    //         console.log('Todo added:', addedTodo);
-    //         handleAddClickClose();
-    //     } catch (error) {
-    //         console.log(error);
-    //     }
-    // };
-
     const renderTodoItem = (todo) => (
         <div key={todo._id} className="w-full">
             <div className="w-full  p-3  rounded-lg ">
