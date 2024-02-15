@@ -1,4 +1,4 @@
-import SocialButtons from "@/app/components/SocialButtons";
+import SocialButtons from "@/components/SocialButtons";
 import "/style/home.css"
 
 export default function Footer() {

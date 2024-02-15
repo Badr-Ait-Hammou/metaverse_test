@@ -1,6 +1,6 @@
 import connectMongoDB from "@/libs/mongodb";
 import { NextResponse } from "next/server";
-import Todo from "@/app/models/todo";
+import Todo from "@/models/todo";
 
 export async function PUT(request, { params }) {
     const { id } = params;

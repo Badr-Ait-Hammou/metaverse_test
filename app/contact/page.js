@@ -13,7 +13,7 @@ export default function Contact(){
                            className="w-full border p-2 rounded-2xl bg-transparent border border-white"/>
                 </div>
                 <div className="w-full md:w-7/12 p-2">
-                    <label htmlFor="full name" className="block mb-2 text-xl font-bold text-white ">Full name</label>
+                    <label htmlFor="full name" className="block mb-2 text-xl font-bold text-white ">Email</label>
 
                     <input type="email"
                            placeholder="Johnmayer@gmail.com"

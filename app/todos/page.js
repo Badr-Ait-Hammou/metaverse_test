@@ -1,9 +1,9 @@
 "use client";
 import {useEffect, useState} from "react";
-import {todoService} from "@/app/service/todoService";
-import {AddModal} from "@/app/components/AddModal";
-import {UpdateModal} from "@/app/components/UpdateModal";
-import ConfirmationModal from "@/app/components/ConfirmationDialog";
+import {todoService} from "@/service/todoService";
+import {AddModal} from "@/components/AddModal";
+import {UpdateModal} from "@/components/UpdateModal";
+import ConfirmationModal from "@/components/ConfirmationDialog";
 
 export default function Todos() {
     const [todos, setTodos] = useState([]);
