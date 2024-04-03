@@ -23,7 +23,7 @@ export default function HomePage() {
                 const response = await fetch('https://ipinfo.io/json');
                 const data = await response.json();
                 setIpInfo(data);
-                console.log("hehe", data)
+                console.log("data", data)
             } catch (error) {
                 console.error('Error fetching IP information:', error);
             }
@@ -81,14 +81,15 @@ export default function HomePage() {
                                     <p className="font-bold">OS : {os.family}</p>
                                     <p>OS Version: {os.version}</p>
                                     <p>OS Architecture: {os.architecture}</p>
-                                    <p>Info Layout: {info.layout}</p>
+                                    {/*<p>Info Layout: {info.layout}</p>*/}
                                     <p>Browser Name: {info.name}</p>
                                     <p>Browser Version: {info.version}</p>
                                     <p>Description: {info.description}</p>
 
+
                                     <DeviceInfo label="Mobile" value={isMobile ? 'Yes' : 'No'} />
                                     <DeviceInfo label="Tablet" value={isTablet ? 'Yes' : 'No'} />
-                                    <DeviceInfo label="Browser" value={isBrowser ? 'Yes' : 'No'} />                                </div>
+                                    <DeviceInfo label="Desktop / Laptop " value={isBrowser ? 'Yes' : 'No'} />                                </div>
                             </div>
                         </div>
                     </div>
