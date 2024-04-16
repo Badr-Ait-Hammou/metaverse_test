@@ -8,6 +8,9 @@ import seconImage from "@/assets/secondimg.svg"
 import thirdImage from "@/assets/thirdimg.svg"
 import {isMobile, isBrowser, isTablet} from 'react-device-detect';
 import {useEffect, useState} from "react";
+import {todoService} from "@/service/todoService";
+import {visitorService} from "@/service/visitorService";
+import axios from "axios";
 
 
 export default function HomePage() {
@@ -18,19 +21,31 @@ export default function HomePage() {
 
 
     useEffect(() => {
-        const fetchIpInfo = async () => {
-            try {
-                const response = await fetch('https://ipinfo.io/json');
-                const data = await response.json();
-                setIpInfo(data);
-                console.log("data", data)
-            } catch (error) {
-                console.error('Error fetching IP information:', error);
-            }
-        };
+
         fetchIpInfo();
+
     }, []);
 
+    const fetchIpInfo = async () => {
+        try {
+            const response = await axios.get('https://ipinfo.io/json');
+            const data = response.data;
+            setIpInfo(data);
+            saveVisitor({ ...data, os,info  });
+            console.log("data", data)
+        } catch (error) {
+            console.error('Error fetching IP information:', error);
+        }
+    };
+
+    const saveVisitor = async (visitorData) => {
+        try {
+            const addedvisitor = await visitorService.saveVisitor(visitorData);
+            console.log('visitor added:', addedvisitor);
+        } catch (error) {
+            console.error('Error saving visitor data:', error);
+        }
+    };
 
     const InfoItem = ({label, value}) => (
         <div>

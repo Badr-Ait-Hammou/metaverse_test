@@ -6,7 +6,7 @@ export  const todoService = {
 
     saveTodo: async (todoData) => {
         try {
-            const response = await axios.post(BASE_URL, todoData);
+            const response = await axios.post(`${BASE_URL}/todos`, todoData);
             return response.data;
         } catch (error) {
             throw error;
@@ -15,7 +15,7 @@ export  const todoService = {
 
     updateTodo: async (id, updatedTodoData) => {
         try {
-            const response = await axios.put(`${BASE_URL}/${id}`, updatedTodoData);
+            const response = await axios.put(`${BASE_URL}/todos/${id}`, updatedTodoData);
             return response.data;
         } catch (error) {
             throw error;
@@ -24,7 +24,7 @@ export  const todoService = {
 
     deleteTodo: async (id) => {
         try {
-            const response = await axios.delete(`${BASE_URL}/${id}`);
+            const response = await axios.delete(`${BASE_URL}/todos/${id}`);
             return response.data;
         } catch (error) {
             throw error;
@@ -33,7 +33,7 @@ export  const todoService = {
 
     getTodoById: async (id) => {
         try {
-            const response = await axios.get(`${BASE_URL}/${id}`);
+            const response = await axios.get(`${BASE_URL}/todos/${id}`);
             return response.data;
         } catch (error) {
             throw error;
@@ -42,7 +42,7 @@ export  const todoService = {
 
     getAllTodos: async () => {
         try {
-            const response = await axios.get(`${BASE_URL}`);
+            const response = await axios.get(`${BASE_URL}/todos`);
             return response.data;
         } catch (error) {
             throw error;
